@@ -18,17 +18,23 @@ const AdminLogin = ({ isOpen, setIsOpen }) => {
                 {/* Modal Content */}
                 <h2 className="text-2xl font-bold text-center mb-6 text-gray-700">Admin Login</h2>
 
-                <div className="flex flex-col space-y-4">
-                    <input 
-                        type="email" 
-                        placeholder="Email" 
-                        className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#18f2d2]"
-                    />
-                    <input 
-                        type="password" 
-                        placeholder="Password" 
-                        className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#18f2d2]"
-                    />
+                <div className="flex flex-col space-y-5">
+                    <div className='flex flex-col'>
+                        <label className='mb-2 text-[#18f2d2]' htmlFor="email">Email</label>
+                        <input 
+                            type="email" 
+                            placeholder="Email" 
+                            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#18f2d2]"
+                        />
+                    </div>
+                    <div className='flex flex-col'>
+                        <label className='mb-2 text-[#18f2d2]' htmlFor="password">Password</label>
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#18f2d2]"
+                        />
+                    </div>
 
                     <button 
                         className="bg-[#18f2d2] hover:bg-[#18f2d2]/80 text-white font-semibold py-2 rounded-md transition duration-300"
