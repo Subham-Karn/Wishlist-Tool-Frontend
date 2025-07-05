@@ -1,0 +1,11 @@
+.bg-blur{
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+.gradient-text {
+  background: linear-gradient(to right, #18f2d2, #008bb0); /* Yellow Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
