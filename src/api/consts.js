@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = '    'https://wishlist-tool-frontend.onrender.com/api';
+const BASE_URL ='https://wishlist-tool-frontend.onrender.com/api';
 
 export const fetchResult = async (url) => {
     try {
