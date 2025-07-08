@@ -7,6 +7,8 @@ import About from '../components/About'
 import Contact from '../components/Conatct'
 import { AdminContext } from '../context/AdminContext'
 import AdminLogin from '../components/AdminLogin'
+import BlogsCard from '../components/BlogCard'
+import { Link } from 'react-scroll'
 const HomeRoute = () => {
   const {isAdminClicked , setIsAdminClicked} = useContext(AdminContext);
   return (
@@ -14,10 +16,18 @@ const HomeRoute = () => {
       {isAdminClicked && <AdminLogin isOpen={isAdminClicked} setIsOpen={setIsAdminClicked}/>}
       <HeroSection/>
       <Compairing/>
+      <Link to="blogs" smooth={true} duration={500}>
+      <BlogsCard/>
+      </Link>
       <HowtoUse/>
       <WhyUseIt/>
+      <Link to="about" smooth={true} duration={500}>
       <About/>
+      </Link>
+      <About/>
+      <Link to="contact" smooth={true} duration={500}>
       <Contact/>
+      </Link>
     </div>
   )
 }

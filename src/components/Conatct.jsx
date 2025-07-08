@@ -1,7 +1,9 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Element } from 'react-scroll';
 
 const Contact = () => {
   return (
+    <Element name='contact'>
     <div className="mx-auto p-6 ">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-700 text-center">Contact Us</h2>
       <p className="text-center text-gray-600 max-w-md mx-auto">
@@ -34,6 +36,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </Element>
   );
 };
 

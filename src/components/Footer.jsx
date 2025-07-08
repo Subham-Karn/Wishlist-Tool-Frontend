@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-xs text-gray-500 py-4 border-t border-gray-200 mt-6">
-        © {new Date().getFullYear()} CompareTool. All rights reserved.
+        © {new Date().getFullYear()} CompareTool. All rights reserved. | Powered by <b className="text-[#18f2d2]">Supern</b>
       </div>
     </footer>
   );

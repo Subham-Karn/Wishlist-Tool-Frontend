@@ -1,7 +1,9 @@
 import { Info, ShieldCheck, Globe2, BadgeCheck } from 'lucide-react';
+import { Element } from 'react-scroll';
 
 const About = () => {
   return (
+    <Element name='about'>
     <div className="mx-auto p-6 mt-10 space-y-6">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-700 text-center">About This Tool</h2>
       
@@ -39,6 +41,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </Element>
   );
 };
 

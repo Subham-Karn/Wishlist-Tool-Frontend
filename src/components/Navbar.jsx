@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { webLogo } from '../assets/assets';
 import { AdminContext } from '../context/AdminContext';
-
+import { Link as LinkScroll } from 'react-scroll';
 const NavLinks = [
-  { name: "Home", path: "/" },
-  { name: "Blog", path: "/blog" },
-  { name: "About", path: "#about" },
-  { name: "Contact", path: "#contact" },
+  { name: "Home", path: "/" , isActive: true},
+  { name: "Blog", path: "blog" , isActive: false},
+  { name: "About", path: "about" , isActive: false},
+  { name: "Contact", path: "contact" , isActive: false},
 ];
 
 const Navbar = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
   const {  setIsAdminClicked } = useContext(AdminContext);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-40">
       <div className="flex justify-between items-center px-4 md:px-10 py-3 max-w-7xl mx-auto">
 
         {/* Logo */}
@@ -29,6 +29,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
           {NavLinks.map((link, index) => (
+            link.isActive == false? <LinkScroll key={index} to={link.path} className={`text-gray-700 hover:text-[#18f2d2] transition ${trackLink === index ? "text-[#18f2d2] font-semibold" : ""}`} onClick={() => setTrackedLink(index)} duration={500} smooth={true}>{link.name}</LinkScroll>: 
             <Link
               key={index}
               to={link.path}

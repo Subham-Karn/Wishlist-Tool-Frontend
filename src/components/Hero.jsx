@@ -1,5 +1,6 @@
 import React from 'react';
 import { heroImage } from '../assets/assets';
+import { Link } from 'react-scroll';
 
 const HeroSection = () => {
   return (
@@ -23,9 +24,11 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-gray-700">
           Compare product prices across Flipkart, Amazon, and more. Get alerts, discounts, and never overpay again!
         </p>
-        <button className="px-8 py-3 bg-gradient-to-r from-[#18f2d2] to-[#008bb0] text-white rounded-full font-medium hover:scale-105 transition">
-          Start Comparing
-        </button>
+        <Link to="compare" smooth={true} duration={500}>
+          <button  className="px-8 py-3 bg-gradient-to-r from-[#18f2d2] to-[#008bb0] text-white rounded-full font-medium hover:scale-105 transition">
+            Start Comparing
+          </button>
+        </Link>
       </div>
 
       {/* Illustration Image */}
