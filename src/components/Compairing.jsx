@@ -88,8 +88,7 @@ const Comparing = () => {
           </div>
         )}
 
-        {!loading && !error && results.length > 0 && (
-        isClicked == true? <ComparingCard productResult={results}/>: "Please Fill The Form"
+        {!loading && !error && results.length > 0 && ( <ComparingCard productResult={results}/>
         )}
 
         {!loading && !error && results.length === 0 && (
